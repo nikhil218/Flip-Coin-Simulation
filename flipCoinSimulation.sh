@@ -20,3 +20,15 @@ done
 
 echo "Number of times Heads won is : " $Heads
 echo "Number of times Tails won is : " $Tails
+
+if [ $Heads -eq $Tails ]
+then
+	echo "It's a tie!"
+elif [ $Heads -gt $Tails ]
+then
+	difference=$(($Heads-$Tails))
+	echo "Heads won by the difference of : " $difference
+else
+	difference=$(($Tails-$Heads))
+	echo "Tails won by the difference of : " $difference
+fi
